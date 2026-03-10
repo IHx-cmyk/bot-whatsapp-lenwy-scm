@@ -5,7 +5,6 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Lenwyy/bot-whatsapp-lenwy-scm)
-![GitHub stars](https://img.shields.io/github/stars/Lenwyy/bot-whatsapp-lenwy-scm?style=social)
 
 </div>
 
