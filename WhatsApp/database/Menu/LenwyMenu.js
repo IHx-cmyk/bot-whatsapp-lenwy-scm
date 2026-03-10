@@ -48,11 +48,7 @@ globalThis.getOrderStats = function () {
 📑 *Information Bot*
 *Creator : Lenwy*
 *Contact : wa.me/6283829814737*
-*Youtube Channel : Lenwy*
-
-📦 *Order Statistics*
-*Order : ${getOrderStats().totalOrders}*
-*Transaksi : Rp${getOrderStats().totalAmount.toLocaleString("id-ID")}*\n`),
+*Youtube Channel : Lenwy*`),
   // List Menu =========================
   (globalThis.storelist = `🎁 *Order Statistics*
 *Order : ${getOrderStats().totalOrders}*
