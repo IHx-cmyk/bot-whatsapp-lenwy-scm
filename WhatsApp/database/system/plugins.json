@@ -1,0 +1,8 @@
+{
+  "disable": [
+    "toimage"
+  ],
+  "maintenance": [
+    "qris"
+  ]
+}
