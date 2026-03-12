@@ -120,17 +120,17 @@ npm start
 
 * [Fitur Utama](#-fitur-utama)
 
-* [[1] Modular Architecture](#-1--modular-architecture-)
+* [Modular Architecture](#-1--modular-architecture-)
 
   * [[A] index.Js (the core connection)](#a-indexjs-the-core-connection)
-* [[2] Multi-Platform Ready](#-2--multi-platform-ready-)
-* [[3] Pairing Code Login](#-3--pairing-code-login)
-* [[4] Global Variable Management](#-4--global-variable-management)
-* [[5] Session Manager](#-5--session-manager)
+* [Multi-Platform Ready](#-2--multi-platform-ready-)
+* [Pairing Code Login](#-3--pairing-code-login)
+* [Global Variable Management](#-4--global-variable-management)
+* [Session Manager](#-5--session-manager)
 
   * [[A] Manajemen autentikasi](#a-manajemen-autentikasi)
-* [[6] Dynamic Command Registry](#-6--dynamic-command-registry)
-* [[7] Metadata Driven](#-7--metadata-driven)
+* [Dynamic Command Registry](#-6--dynamic-command-registry)
+* [Metadata Driven](#-7--metadata-driven)
 
   * [[A] Identitas Fitur](#a-identitas-fitur)
   * [[B] Menu Category](#b-menu-category)
@@ -147,7 +147,7 @@ npm start
   * [[F] Bot Admin Required](#f-bot-admin-required)
   * [[G] Private Permission](#g-private-permission)
 
-* [[8] Helper Function System](#-8--helper-function-system)
+* [Helper Function System](#-8--helper-function-system)
 
   * [[A] Send Text](#a-send-text)
   * [[B] Wait Message](#b-wait-message)
@@ -156,12 +156,12 @@ npm start
   * [[E] Send Audio](#e-send-audio)
   * [[F] Send File](#f-send-file)
 
-* [[9] Label System](#-9--label-system)
+* [Label System](#-9--label-system)
 
   * [[A] Label Generator](#a-label-generator)
   * [[B] Label Priority System](#b-label-priority-system)
 
-* [[10] Struktur Fitur](#-10--struktur-fitur)
+* [Struktur Fitur](#-10--struktur-fitur)
 
   * [[A] Metadata Feature](#a-metadata-feature)
   * [[B] Handler Function](#b-handler-function)
