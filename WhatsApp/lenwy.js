@@ -335,22 +335,6 @@ export default async (lenwy, m, meta) => {
     }
   }
 
-  // Antilink
-  if (isGroup && isBotAdmin) {
-    const { runAntilinkCheck } = await import("./case/group/antilink.js");
-    const deleted = await runAntilinkCheck({
-      lenwy,
-      msg,
-      body,
-      replyJid,
-      isAdmin,
-      isLenwy,
-      isBotAdmin,
-      deleteMessage,
-    });
-    if (deleted) return;
-  }
-
   let usedPrefix = null;
   for (const pre of globalThis.prefix) {
     if (body.startsWith(pre)) {
