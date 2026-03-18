@@ -1,6 +1,6 @@
 /*  
 
-  Made By Lenwy
+  Made By Ditzzy
   Base : Lenwy
   WhatsApp : wa.me/6283829814737
   Telegram : t.me/ilenwy
