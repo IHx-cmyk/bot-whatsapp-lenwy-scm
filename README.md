@@ -19,10 +19,11 @@ Dengan memecah sistem **switch case** menjadi modul-modul terpisah, struktur kod
 ## 📚 **Table of Contents**
 
 * [Instalasi](#-instalasi)
-  * [[A] Clone Repositori](#a-clone-repositori)
-  * [[B] Masuk Ke Direktori](#b-masuk-ke-direktori)
-  * [[C] Install Dependencies](#c-install-dependencies)
-  * [[D] Jalankan Script](#d-jalankan-script)
+  * [[A] Install FFmpeg](#a-install-ffmpeg)
+  * [[B] Clone Repositori](#b-clone-repositori)
+  * [[C] Masuk Ke Direktori](#c-masuk-ke-direktori)
+  * [[D] Install Dependencies](#d-install-dependencies)
+  * [[E] Jalankan Script](#e-jalankan-script)
 * [Update](#-update)
   * [[A] Update Semua File](#a-update-semua-file-tanpa-menghapus-file-yang-dikembangkan)
   * [[B] Update File Tertentu Saja](#b-update-file-tertentu-saja)
@@ -51,21 +52,35 @@ Dengan memecah sistem **switch case** menjadi modul-modul terpisah, struktur kod
 
 Pastikan anda sudah menginstall Node.js (versi LTS direkomendasikan). Jika belum, unduh di [nodejs.org](https://nodejs.org).
 
-#### **[A] Clone Repositori**
+### [A] Install FFmpeg
+Bot ini membutuhkan FFmpeg untuk fitur sticker. Install sesuai environment kamu:
+
+**Termux (Android)**
+```
+pkg install ffmpeg
+```
+**Linux (Ubuntu/Debian)**
+```
+sudo apt install ffmpeg
+```
+> **Catatan:** Lewati langkah ini jika kamu menjalankan bot melalui Pterodactyl Panel, karena FFmpeg sudah tersedia di dalam container secara default.
+> 
+
+#### **[B] Clone Repositori**
 
 Salin repositori ini ke komputer atau server kamu:
 ```
 git clone https://github.com/Lenwyy/bot-whatsapp-lenwy-scm
 ```
 
-#### **[B] Masuk Ke Direktori**
+#### **[C] Masuk Ke Direktori**
 
 Setelah clone selesai, masuk ke folder yang baru dibuat:
 ```
 cd bot-whatsapp-lenwy-scm
 ```
 
-#### **[C] Install Dependencies**
+#### **[D] Install Dependencies**
 
 Install semua package yang dibutuhkan oleh bot:
 ```
@@ -74,7 +89,7 @@ npm install
 
 > **Catatan:** Proses ini membutuhkan koneksi internet. Tunggu hingga selesai sebelum melanjutkan ke langkah berikutnya.
 
-#### **[D] Jalankan Script**
+#### **[E] Jalankan Script**
 
 Setelah semua dependencies terpasang, jalankan bot dengan perintah berikut:
 ```
