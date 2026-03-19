@@ -1,27 +1,27 @@
-/*  
-
-  Made By Ditzzy
-  Base : Lenwy
-  WhatsApp : wa.me/6283829814737
-  Telegram : t.me/ilenwy
-  Youtube : @Lenwy
-
-  Channel : https://whatsapp.com/channel/0029VaGdzBSGZNCmoTgN2K0u
-
-  Copy Code?, Recode?, Rename?, Reupload?, Reseller? Taruh Credit Ya :D
-
-  Mohon Untuk Tidak Menghapus Watermark Di Dalam Kode Ini
-
-*/
+/*   
+  
+   Made By Ditzzy
+   Base : Lenwy 
+   WhatsApp : wa.me/6283829814737 
+   Telegram : t.me/ilenwy 
+   Youtube : @Lenwy 
+  
+   Channel : https://whatsapp.com/channel/0029VaGdzBSGZNCmoTgN2K0u 
+  
+   Copy Code?, Recode?, Rename?, Reupload?, Reseller? Taruh Credit Ya :D 
+  
+   Mohon Untuk Tidak Menghapus Watermark Di Dalam Kode Ini 
+  
+ */
 
 import axios from "axios";
 import FormData from "form-data";
 import { downloadContentFromMessage } from "@whiskeysockets/baileys";
 
 export const info = {
-  name: "AI Media",
+  name: "Remini",
 
-  menu: ["Hd"],
+  menu: ["Remini"],
   case: ["hd", "remini"],
 
   description: "AI Untuk Media Seperti Photo",
@@ -60,19 +60,15 @@ async function enhancer(buffer, { method = 1, size = "low" } = {}) {
   form.append("file", buffer, `${Date.now()}.jpg`);
 
   try {
-    const response = await axios.post(
-      "https://ihancer.com/api/enhance",
-      form,
-      {
-        headers: {
-          ...form.getHeaders(),
-          "accept-encoding": "gzip",
-          host: "ihancer.com",
-          "user-agent": "Dart/3.5 (dart:io)",
-        },
-        responseType: "arraybuffer",
-      }
-    );
+    const response = await axios.post("https://ihancer.com/api/enhance", form, {
+      headers: {
+        ...form.getHeaders(),
+        "accept-encoding": "gzip",
+        host: "ihancer.com",
+        "user-agent": "Dart/3.5 (dart:io)",
+      },
+      responseType: "arraybuffer",
+    });
 
     return Buffer.from(response.data);
   } catch (err) {
@@ -96,33 +92,44 @@ async function downloadImage(message) {
 }
 
 export default async function handler(leni) {
-  const { command, msg, lenwy, replyJid, LenwyText } = leni;
+  const { command, msg, lenwy, replyJid, LenwyText, LenwyWait, len } = leni;
 
   switch (command) {
     case "hd":
-    case "remini":
-      {
-        const quoted = msg.message?.extendedTextMessage?.contextInfo;
-        const quotedMsg = quoted?.quotedMessage;
+    case "remini": {
+      const quoted = msg.message?.extendedTextMessage?.contextInfo;
+      const quotedMsg = quoted?.quotedMessage;
 
-        if (!quotedMsg?.imageMessage) {
-          return LenwyText("⚠️ Reply Gambar Dengan *hd* atau *remini*");
-        }
+      const imageMessage = quotedMsg?.imageMessage ?? msg.message?.imageMessage;
 
-        try {
-          const buffer = await downloadImage(quotedMsg.imageMessage);
-
-          const enhancedImage = await enhancer(buffer, { method: 1, size: "high" });
-
-          await lenwy.sendMessage(replyJid, {
-            image: enhancedImage,
-            caption: "🎁 Gambar Berhasil Ditingkatkan",
-          });
-        } catch (err) {
-          console.error("Enhancer Error:", err);
-          return LenwyText("❌ Gagal Meningkatkan Gambar.");
-        }
+      if (!imageMessage) {
+        return LenwyText("⚠️ Reply / Kirim Gambar Dengan Caption *.hd*");
       }
+
+      LenwyWait();
+
+      try {
+        const buffer = await downloadImage(imageMessage);
+        const enhancedImage = await enhancer(buffer, {
+          method: 1,
+          size: "high",
+        });
+
+        await lenwy.sendMessage(
+          replyJid,
+          {
+            image: enhancedImage,
+            caption:
+              "🎁 *Gambar Berhasil Ditingkatkan*\n*[+] Thanks To Ditzzy For His Commits*",
+          },
+          { quoted: len },
+        );
+      } catch (err) {
+        console.error("Enhancer Error:", err);
+        return LenwyText("❌ Gagal Meningkatkan Gambar.");
+      }
+
       break;
+    }
   }
 }
