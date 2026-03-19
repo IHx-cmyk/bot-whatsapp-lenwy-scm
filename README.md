@@ -468,7 +468,7 @@ Dengan sistem ini, bot mengetahui secara otomatis:
 
 Setiap fitur menggunakan sistem **Metadata Driven**, yaitu seluruh pengaturan fitur ditentukan melalui sebuah objek bernama `info` yang berada di setiap file fitur.
 
-Dengan sistem ini, kamu bisa mengatur nama, kategori, command, hak akses, dan visibilitas fitur hanya dari satu tempat tanpa perlu menyentuh sistem utama bot:
+Dengan sistem ini, kamu bisa mengatur nama, tampilan, command, hak akses, dan visibilitas fitur hanya dari satu tempat tanpa perlu menyentuh sistem utama bot:
 
 ```js
 import Ai4Chat from "../../scrape/Ai4Chat.js";
@@ -507,13 +507,13 @@ Nama fitur yang digunakan sebagai identitas internal. Nama ini juga akan tampil 
 
 ---
 
-#### **[B] Menu Category**
+#### **[B] Menu Name**
 
 ```js
 menu: ["AI"]
 ```
 
-Menentukan di kategori mana fitur ini akan ditampilkan. Nilai ini harus sesuai dengan nama folder yang ada di dalam direktori `case/`.
+Menentukan bagaimana fitur ini akan ditampilkan di menu. Nilai ini disesuaikan dengan `Case`.
 
 ---
 
