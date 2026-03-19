@@ -8,7 +8,7 @@
 export const info = {
   name: "Upload Status Grup",
 
-  menu: ["Group"],
+  menu: ["Upsw"],
   case: ["upsw", "groupstatus", "swgrup"],
 
   description: "Upload Media Sebagai Status Grup",
