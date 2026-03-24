@@ -16,7 +16,7 @@ const RAW_JSON_URL = "https://raw.githubusercontent.com/SakanaaDesuKa/AlightMoti
 export const info = {
   name: "Random Preset Alight Motion",
   menu: ["preset"],
-  case: ["presetam", "priset", "getpreset"],
+  case: ["preset", "priset", "getpreset"],
   description: "Ambil preset Alight Motion secara random",
   hidden: false,
   owner: false,
