@@ -71,7 +71,7 @@ export default async function handler(leni) {
       if (ttRes.data?.status !== 200) throw new Error(ttRes.data?.message || "API error");
       ttData = ttRes.data.data;
     } catch (e) {
-      return LenwyText(`⚠️ Gagal mengambil video TikTok.\n${e.message}`);
+      return LenwyText(`⚠️ Gagal Mengambil Video.\n${e.message}`);
     }
 
     const videoUrl = ttData.watermark || ttData.no_watermark;
@@ -88,13 +88,14 @@ export default async function handler(leni) {
 
     fs.writeFileSync(tmpPath, Buffer.from(videoRes.data));
 
-    let caption = `*Random Preset Alight Motion*\n`;
+    let caption = `*Random Preset Alight Motion*\n\n`;
     if (title) caption += `*${title}*\n\n`;
     caption += `*Creadit :* ${editby}\n`;
     caption += `*Preset 5mb/5mb+ :* ${presetLink}\n\n`;
     if (xmlLink) caption += `*XML :* ${xmlLink}\n\n`;
     caption += `*Source :* ${sourceUrl}\n`;
-
+    caption += `> Harap Mencantumkan Nama Kreator Preset Jika Ingin MengUpload Hasilnya Ke Media Sosial`;
+    
     await lenwy.sendMessage(
       replyJid,
       {
