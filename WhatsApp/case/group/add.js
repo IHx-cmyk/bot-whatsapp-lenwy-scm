@@ -8,7 +8,7 @@
 export const info = {
   name: "Add Member",
 
-  menu: ["Group"],
+  menu: ["Add"],
   case: ["add", "tambah", "invite"],
 
   description: "Tambahkan Anggota ke Dalam Grup",

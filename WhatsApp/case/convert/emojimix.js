@@ -6,7 +6,7 @@ import webp from "node-webpmux";
 export const info = {
   name: "Emoji Mix",
 
-  menu: ["Convert"],
+  menu: ["Emojimix"],
   case: ["emojimix", "mix"],
 
   description: "Gabungkan Dua Emoji Menjadi Sticker!",

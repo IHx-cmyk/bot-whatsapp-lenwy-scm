@@ -8,7 +8,7 @@
 export const info = {
   name: "YouTube Search",
 
-  menu: ["Down"],
+  menu: ["Yts"],
   case: ["ytsearch", "yts", "cariyt"],
 
   description: "Cari Video Di YouTube",
